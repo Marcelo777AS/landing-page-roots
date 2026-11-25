@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900" preserveAspectRatio="xMaxYMax slice" role="img" aria-label="Tabla de madera con asado y vino tinto frente a los cerros de Salta al atardecer">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#170000"/>
+      <stop offset=".35" stop-color="#350a06"/>
+      <stop offset=".55" stop-color="#8f3d38"/>
+      <stop offset=".62" stop-color="#cb7169"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="1180" cy="470" r="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cb7169" stop-opacity=".9"/>
+      <stop offset=".35" stop-color="#cb7169" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#cb7169" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="table" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#56070c"/>
+      <stop offset=".25" stop-color="#350a06"/>
+      <stop offset="1" stop-color="#170000"/>
+    </linearGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a24e3c"/>
+      <stop offset="1" stop-color="#8f3d38"/>
+    </linearGradient>
+    <linearGradient id="bottle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#170000"/>
+      <stop offset=".3" stop-color="#350a06"/>
+      <stop offset=".55" stop-color="#170000"/>
+      <stop offset="1" stop-color="#0d0000"/>
+    </linearGradient>
+    <clipPath id="range2Clip">
+      <path d="M0 600 L120 540 L210 575 L330 505 L450 585 L560 545 L660 600 L780 530 L900 590 L1010 540 L1130 610 L1260 535 L1380 590 L1500 550 L1600 580 V900 H0Z"/>
+    </clipPath>
+    <!-- Cardón (cactus típico de los valles salteños) -->
+    <g id="cardon" fill="#170000">
+      <rect x="-10" y="-160" width="20" height="160" rx="10"/>
+      <rect x="-38" y="-118" width="15" height="60" rx="7.5"/>
+      <rect x="-38" y="-72" width="34" height="15" rx="7.5"/>
+      <rect x="23" y="-138" width="15" height="78" rx="7.5"/>
+      <rect x="4" y="-74" width="34" height="15" rx="7.5"/>
+    </g>
+  </defs>
+
+  <!-- Cielo al atardecer -->
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <circle cx="1180" cy="470" r="52" fill="#f0a89d" opacity=".9"/>
+  <g fill="#f6e7e3" opacity=".5">
+    <circle cx="420" cy="80" r="1.4"/><circle cx="760" cy="140" r="1.2"/><circle cx="1050" cy="60" r="1.5"/>
+    <circle cx="1320" cy="120" r="1.1"/><circle cx="1500" cy="50" r="1.3"/><circle cx="880" cy="40" r="1"/>
+  </g>
+
+  <!-- Cordillera lejana -->
+  <path d="M0 520 L90 470 L170 495 L260 430 L360 480 L430 455 L520 500 L600 440 L700 395 L790 450 L880 430 L960 470 L1060 400 L1150 445 L1240 420 L1330 470 L1420 410 L1510 450 L1600 430 V900 H0Z" fill="#8f3d38"/>
+  <!-- nieve en las cumbres -->
+  <g fill="#cb7169" opacity=".55">
+    <path d="M700 395 L728 410 L712 412 L700 405 L688 413 L675 409Z"/>
+    <path d="M1060 400 L1085 413 L1070 415 L1060 409 L1048 416 L1037 411Z"/>
+    <path d="M1420 410 L1444 423 L1430 425 L1420 419 L1408 425 L1397 421Z"/>
+  </g>
+
+  <!-- Cerros colorados con estratos (Quebrada de las Conchas) -->
+  <path d="M0 600 L120 540 L210 575 L330 505 L450 585 L560 545 L660 600 L780 530 L900 590 L1010 540 L1130 610 L1260 535 L1380 590 L1500 550 L1600 580 V900 H0Z" fill="#56070c"/>
+  <g clip-path="url(#range2Clip)" fill="none" stroke-linecap="round">
+    <path d="M-50 640 L1650 560" stroke="#8f3d38" stroke-width="10" opacity=".55"/>
+    <path d="M-50 600 L1650 520" stroke="#cb7169" stroke-width="4" opacity=".3"/>
+    <path d="M-50 675 L1650 600" stroke="#350a06" stroke-width="14" opacity=".6"/>
+    <path d="M-50 575 L1650 495" stroke="#8f3d38" stroke-width="6" opacity=".45"/>
+    <path d="M-50 710 L1650 640" stroke="#8f3d38" stroke-width="5" opacity=".35"/>
+  </g>
+
+  <!-- Lomas cercanas -->
+  <path d="M0 700 C150 650 300 640 450 670 C600 700 720 650 880 660 C1040 670 1150 640 1300 650 C1420 660 1520 640 1600 650 V900 H0Z" fill="#350a06"/>
+
+  <!-- Cardones -->
+  <use xlink:href="#cardon" href="#cardon" transform="translate(1250 660) scale(.4)"/>
+  <use xlink:href="#cardon" href="#cardon" transform="translate(1110 668) scale(.3)"/>
+  <use xlink:href="#cardon" href="#cardon" transform="translate(130 705) scale(.9)"/>
+  <use xlink:href="#cardon" href="#cardon" transform="translate(280 690) scale(.55)"/>
+  <use xlink:href="#cardon" href="#cardon" transform="translate(470 692) scale(.7)"/>
+  <use xlink:href="#cardon" href="#cardon" transform="translate(640 690) scale(1.05)"/>
+
+  <!-- Suelo -->
+  <path d="M0 790 C200 770 420 780 640 790 V900 H0Z" fill="#170000"/>
+
+  <!-- Mesa de madera -->
+  <polygon points="560,790 1600,748 1600,900 520,900" fill="url(#table)"/>
+  <g stroke="#170000" stroke-width="2" opacity=".7">
+    <line x1="548" y1="822" x2="1600" y2="786"/>
+    <line x1="536" y1="858" x2="1600" y2="828"/>
+    <line x1="524" y1="892" x2="1600" y2="870"/>
+  </g>
+  <g stroke="#8f3d38" stroke-width="1" opacity=".35" fill="none">
+    <path d="M620 800 C760 795 900 790 1040 786"/>
+    <path d="M700 842 C900 836 1100 830 1300 824"/>
+    <path d="M640 878 C840 872 1000 868 1200 862"/>
+  </g>
+
+  <!-- Botella de vino tinto (detrás de la tabla) -->
+  <ellipse cx="1330" cy="716" rx="46" ry="7" fill="#000" opacity=".35"/>
+  <rect x="1294" y="525" width="72" height="190" rx="8" fill="url(#bottle)"/>
+  <path d="M1294 540 C1294 505 1318 495 1320 475 L1340 475 C1342 495 1366 505 1366 540Z" fill="url(#bottle)"/>
+  <rect x="1320" y="410" width="20" height="70" fill="url(#bottle)"/>
+  <rect x="1318" y="398" width="24" height="56" rx="3" fill="#8f3d38"/>
+  <rect x="1318" y="446" width="24" height="5" fill="#56070c"/>
+  <rect x="1302" y="545" width="6" height="160" rx="3" fill="#cb7169" opacity=".22"/>
+  <rect x="1300" y="590" width="60" height="78" rx="2" fill="#f3dcd5"/>
+  <rect x="1300" y="590" width="60" height="78" rx="2" fill="none" stroke="#8f3d38" stroke-width="1"/>
+  <text x="1330" y="616" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="700" fill="#56070c" letter-spacing="1">ROOTS</text>
+  <line x1="1310" y1="624" x2="1350" y2="624" stroke="#8f3d38" stroke-width="1"/>
+  <text x="1330" y="641" text-anchor="middle" font-family="Georgia, serif" font-size="11" font-style="italic" fill="#350a06">Malbec</text>
+  <text x="1330" y="656" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#8f3d38" letter-spacing="1">CAFAYATE</text>
+
+  <!-- Tabla de asado -->
+  <ellipse cx="1120" cy="790" rx="300" ry="14" fill="#000" opacity=".4"/>
+  <rect x="806" y="730" width="70" height="26" rx="13" fill="#6e2a22"/>
+  <circle cx="826" cy="743" r="5" fill="#350a06"/>
+  <rect x="860" y="715" width="540" height="76" rx="34" fill="#6e2a22"/>
+  <rect x="860" y="705" width="540" height="76" rx="34" fill="url(#board)"/>
+  <g stroke="#6e2a22" stroke-width="1.2" fill="none" opacity=".6">
+    <path d="M890 728 C1000 722 1150 726 1370 720"/>
+    <path d="M885 752 C1050 746 1200 752 1385 744"/>
+    <path d="M900 770 C1060 766 1220 770 1360 764"/>
+  </g>
+
+  <!-- Bife -->
+  <path d="M900 735 C895 708 935 696 985 700 C1035 704 1050 720 1042 740 C1034 760 960 766 920 758 C907 754 902 746 900 735Z" fill="#56070c"/>
+  <path d="M906 728 C912 708 945 700 985 702 C1020 704 1038 712 1042 726" stroke="#e7b9a8" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"/>
+  <g stroke="#170000" stroke-width="4" stroke-linecap="round" opacity=".75">
+    <line x1="928" y1="714" x2="952" y2="754"/>
+    <line x1="960" y1="708" x2="986" y2="756"/>
+    <line x1="994" y1="706" x2="1018" y2="752"/>
+  </g>
+
+  <!-- Chorizos -->
+  <rect x="1062" y="706" width="118" height="24" rx="12" fill="#6e1c14"/>
+  <rect x="1066" y="734" width="114" height="24" rx="12" fill="#6e1c14"/>
+  <rect x="1076" y="710" width="90" height="5" rx="2.5" fill="#cb7169" opacity=".4"/>
+  <rect x="1080" y="738" width="86" height="5" rx="2.5" fill="#cb7169" opacity=".4"/>
+  <g stroke="#170000" stroke-width="3" stroke-linecap="round" opacity=".7">
+    <line x1="1090" y1="712" x2="1096" y2="726"/><line x1="1115" y1="712" x2="1121" y2="726"/><line x1="1140" y1="712" x2="1146" y2="726"/>
+    <line x1="1094" y1="740" x2="1100" y2="754"/><line x1="1119" y1="740" x2="1125" y2="754"/><line x1="1144" y1="740" x2="1150" y2="754"/>
+  </g>
+
+  <!-- Tira de asado -->
+  <rect x="1198" y="712" width="156" height="40" rx="9" fill="#56070c"/>
+  <rect x="1198" y="736" width="156" height="16" rx="8" fill="#350a06" opacity=".6"/>
+  <g fill="#efd8cc">
+    <ellipse cx="1222" cy="717" rx="10" ry="5.5"/><ellipse cx="1260" cy="717" rx="10" ry="5.5"/>
+    <ellipse cx="1298" cy="717" rx="10" ry="5.5"/><ellipse cx="1334" cy="717" rx="10" ry="5.5"/>
+  </g>
+  <g fill="#8f3d38">
+    <circle cx="1222" cy="717" r="2.5"/><circle cx="1260" cy="717" r="2.5"/><circle cx="1298" cy="717" r="2.5"/><circle cx="1334" cy="717" r="2.5"/>
+  </g>
+  <g stroke="#170000" stroke-width="3" stroke-linecap="round" opacity=".6">
+    <line x1="1212" y1="728" x2="1340" y2="726"/>
+  </g>
+
+  <!-- Chimichurri -->
+  <ellipse cx="800" cy="822" rx="50" ry="9" fill="#000" opacity=".4"/>
+  <path d="M756 800 C758 830 842 830 844 800Z" fill="#8f3d38"/>
+  <ellipse cx="800" cy="800" rx="44" ry="12" fill="#a24e3c"/>
+  <ellipse cx="800" cy="801" rx="38" ry="9" fill="#3d4a1e"/>
+  <g fill="#6f7f34"><circle cx="785" cy="799" r="2.2"/><circle cx="805" cy="803" r="2"/><circle cx="818" cy="798" r="1.8"/><circle cx="794" cy="804" r="1.6"/></g>
+  <g fill="#cb7169"><circle cx="798" cy="797" r="1.6"/><circle cx="812" cy="802" r="1.4"/><circle cx="780" cy="802" r="1.3"/></g>
+
+  <!-- Copa de vino -->
+  <ellipse cx="1485" cy="776" rx="30" ry="5" fill="#000" opacity=".45"/>
+  <path d="M1455 632 C1453 682 1463 708 1485 710 C1507 708 1517 682 1515 632Z" fill="#f6e7e3" fill-opacity=".07" stroke="#f6e7e3" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M1457 670 C1460 696 1470 708 1485 709 C1500 708 1510 696 1513 670Z" fill="#56070c"/>
+  <ellipse cx="1485" cy="670" rx="28" ry="4" fill="#8f3d38"/>
+  <line x1="1485" y1="710" x2="1485" y2="770" stroke="#f6e7e3" stroke-opacity=".55" stroke-width="3"/>
+  <ellipse cx="1485" cy="772" rx="24" ry="5" fill="none" stroke="#f6e7e3" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M1462 645 C1462 670 1466 684 1472 692" stroke="#f6e7e3" stroke-opacity=".35" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

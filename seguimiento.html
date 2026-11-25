@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seguimiento de tu pedido — Roots</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="track-page">
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="logo">Roots<span class="logo__dot">.</span></a>
+      <a href="index.html#menu" class="btn btn--small btn--ghost">Volver al menú</a>
+    </div>
+  </header>
+
+  <main class="section track">
+    <!-- Pedido no encontrado -->
+    <div class="container track__empty" data-track-empty hidden>
+      <p class="eyebrow">Seguimiento</p>
+      <h1>No encontramos ese pedido.</h1>
+      <p class="muted">Revisa que el link esté completo, o escríbenos por WhatsApp con tu número de pedido.</p>
+      <div class="hero__actions">
+        <a href="index.html#menu" class="btn">Hacer un pedido</a>
+        <a href="seguimiento.html?demo=1" class="btn btn--ghost">Ver demo</a>
+      </div>
+    </div>
+
+    <!-- Seguimiento -->
+    <div class="container" data-track hidden>
+      <div class="track__head">
+        <div>
+          <p class="eyebrow">Seguimiento en vivo <span class="demo-badge" data-demo-badge hidden>Demo</span></p>
+          <h1 class="track__title">Pedido <span data-order-id></span></h1>
+          <p class="track__status" data-status-title></p>
+          <p class="muted" data-status-desc></p>
+        </div>
+        <div class="eta" data-eta>
+          <span class="eta__label" data-eta-label>Llega en</span>
+          <strong class="eta__value" data-eta-value>—</strong>
+        </div>
+      </div>
+
+      <div class="track__grid">
+        <div class="track__main">
+          <div class="map-card">
+            <div class="map" data-map></div>
+            <div class="map-card__foot" data-courier-bar>
+              <span class="courier-bar__end">🔥 Roots</span>
+              <div class="courier-bar">
+                <div class="courier-bar__fill" data-courier-fill></div>
+                <span class="courier-bar__bike" data-courier-bike aria-hidden="true">🛵</span>
+              </div>
+              <span class="courier-bar__end">🏡 Tu casa</span>
+            </div>
+            <p class="map-card__note muted" data-map-note></p>
+          </div>
+        </div>
+
+        <aside class="track__side">
+          <div class="panel">
+            <h2 class="panel__title">Estado del pedido</h2>
+            <ol class="timeline" data-timeline></ol>
+          </div>
+
+          <div class="panel">
+            <h2 class="panel__title">Detalle</h2>
+            <p class="muted track__meta" data-order-meta></p>
+            <ul class="cart__list" data-order-items></ul>
+            <dl class="cart__totals" data-order-totals></dl>
+          </div>
+
+          <a class="btn btn--ghost btn--block" data-help-link href="#" target="_blank" rel="noopener">¿Dudas? Escríbenos por WhatsApp</a>
+          <button type="button" class="btn btn--block" data-replay hidden>Repetir demo</button>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="logo logo--small">Roots<span class="logo__dot">.</span></span>
+      <span class="muted">© <span data-year></span> Roots · Comida casera</span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="tracking.js"></script>
+</body>
+</html>

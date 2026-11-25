@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roots — Comida casera</title>
+  <meta name="description" content="Roots, casa de comida casera. Pide para delivery o ven a comer al local." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navegación -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="logo">Roots<span class="logo__dot">.</span></a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#menu">Menú</a>
+        <a href="#como-pedir">Cómo pedir</a>
+        <a href="#seguimiento">Seguimiento</a>
+        <a href="#visitanos">Visítanos</a>
+      </nav>
+      <a href="#pedido" class="btn btn--small">Pedir ahora <span class="cart-count" data-cart-count>0</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <img class="hero__scene" src="hero.svg" alt="" aria-hidden="true" />
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">Cocina casera del norte</p>
+          <h1>Comida de casa,<br />desde la raíz.</h1>
+          <p class="hero__lead">
+            Asado a la leña, recetas salteñas de siempre y un buen tinto de los Valles.
+            Pide a domicilio o ven a comer con nosotros.
+          </p>
+          <div class="hero__actions">
+            <a href="#menu" class="btn">Ver el menú</a>
+            <a href="#visitanos" class="btn btn--ghost">Horarios y ubicación</a>
+          </div>
+          <ul class="hero__badges">
+            <li>🛵 Delivery</li>
+            <li>🍽️ Comer en el local</li>
+            <li>🔥 Hecho cada día</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo pedir -->
+    <section id="como-pedir" class="section section--alt">
+      <div class="container">
+        <p class="eyebrow">Cómo pedir</p>
+        <h2>Tres pasos y listo.</h2>
+        <ol class="steps">
+          <li>
+            <span class="steps__num">01</span>
+            <h3>Elige tus platillos</h3>
+            <p>Agrega al pedido lo que se te antoje del menú del día.</p>
+          </li>
+          <li>
+            <span class="steps__num">02</span>
+            <h3>Delivery o en el local</h3>
+            <p>Te lo llevamos a casa o te reservamos mesa para que vengas.</p>
+          </li>
+          <li>
+            <span class="steps__num">03</span>
+            <h3>Confirma y seguí tu pedido</h3>
+            <p>Lo envías por WhatsApp y lo sigues en vivo, de la cocina a tu puerta.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Menú -->
+    <section id="menu" class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Nuestro menú</p>
+            <h2>Hecho hoy, como en casa.</h2>
+          </div>
+          <div class="tabs" role="tablist" data-tabs></div>
+        </div>
+        <div class="menu" data-menu></div>
+      </div>
+    </section>
+
+    <!-- Pedido -->
+    <section id="pedido" class="section section--alt">
+      <div class="container order">
+        <div class="order__intro">
+          <p class="eyebrow">Tu pedido</p>
+          <h2>Casi listo.</h2>
+          <p class="muted">Revisa tu pedido, completa tus datos y lo enviamos directo a nuestra cocina por WhatsApp.</p>
+
+          <div class="cart" data-cart>
+            <p class="cart__empty" data-cart-empty>Aún no has agregado platillos. <a href="#menu">Ver el menú →</a></p>
+            <ul class="cart__list" data-cart-list></ul>
+            <dl class="cart__totals" data-cart-totals hidden>
+              <div><dt>Subtotal</dt><dd data-subtotal>$0</dd></div>
+              <div data-delivery-row><dt>Envío</dt><dd data-delivery-fee>$0</dd></div>
+              <div class="cart__total"><dt>Total</dt><dd data-total>$0</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <form class="form" data-order-form novalidate>
+          <fieldset class="mode">
+            <legend class="form__label">¿Cómo lo quieres?</legend>
+            <label class="mode__option">
+              <input type="radio" name="mode" value="delivery" checked />
+              <span>🛵 Delivery</span>
+            </label>
+            <label class="mode__option">
+              <input type="radio" name="mode" value="local" />
+              <span>🍽️ Comer en el local</span>
+            </label>
+          </fieldset>
+
+          <div class="form__row">
+            <label class="field">
+              <span class="form__label">Nombre</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label class="field">
+              <span class="form__label">Teléfono</span>
+              <input type="tel" name="phone" autocomplete="tel" required />
+            </label>
+          </div>
+
+          <div data-delivery-fields>
+            <label class="field">
+              <span class="form__label">Dirección de entrega</span>
+              <input type="text" name="address" autocomplete="street-address" placeholder="Calle, número, barrio" required />
+            </label>
+            <label class="field">
+              <span class="form__label">Forma de pago</span>
+              <select name="payment">
+                <option>Efectivo</option>
+                <option>Transferencia</option>
+                <option>Tarjeta (terminal a domicilio)</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form__row" data-local-fields hidden>
+            <label class="field">
+              <span class="form__label">Hora de llegada</span>
+              <input type="time" name="time" min="12:00" max="21:30" />
+            </label>
+            <label class="field">
+              <span class="form__label">Personas</span>
+              <input type="number" name="people" min="1" max="20" value="2" />
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="form__label">Notas <span class="muted">(opcional)</span></span>
+            <textarea name="notes" rows="3" placeholder="Sin cebolla, timbre no funciona, etc."></textarea>
+          </label>
+
+          <p class="form__error" data-form-error role="alert"></p>
+
+          <button type="submit" class="btn btn--block">Enviar pedido por WhatsApp</button>
+          <p class="form__hint muted">Se abrirá WhatsApp con tu pedido listo para enviar.</p>
+
+          <div class="order-sent" data-order-sent hidden>
+            <p class="order-sent__title">Pedido <strong data-order-sent-id></strong> registrado</p>
+            <p class="muted">Envía el mensaje de WhatsApp para confirmarlo. Desde aquí puedes seguirlo en vivo.</p>
+            <a class="btn btn--block" data-order-sent-link href="#">Seguir mi pedido en el mapa →</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Ruta del pedido / seguimiento -->
+    <section id="seguimiento" class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">Seguimiento en vivo</p>
+            <h2>Del fogón a tu puerta.</h2>
+          </div>
+          <p class="muted section__aside">Cada pedido tiene su propio link de seguimiento. Ahí ves en qué etapa está y, si es delivery, dónde va tu repartidor en Google Maps.</p>
+        </div>
+
+        <ol class="route">
+          <li class="route__stop">
+            <span class="route__icon" aria-hidden="true">📝</span>
+            <span class="route__num">01</span>
+            <h3>Registro del pedido</h3>
+            <p>Recibimos tu pedido por WhatsApp y te asignamos un número.</p>
+          </li>
+          <li class="route__stop">
+            <span class="route__icon" aria-hidden="true">🔥</span>
+            <span class="route__num">02</span>
+            <h3>En cocina</h3>
+            <p>Lo preparamos al momento, a la leña y con recetas de la casa.</p>
+          </li>
+          <li class="route__stop">
+            <span class="route__icon" aria-hidden="true">🛵</span>
+            <span class="route__num">03</span>
+            <h3>En camino</h3>
+            <p>Sigue a tu repartidor en el mapa, minuto a minuto.</p>
+          </li>
+          <li class="route__stop">
+            <span class="route__icon" aria-hidden="true">🏡</span>
+            <span class="route__num">04</span>
+            <h3>Entregado</h3>
+            <p>Llega caliente a tu mesa. Si vienes al local, te esperamos servido.</p>
+          </li>
+        </ol>
+
+        <div class="track-cta">
+          <div class="track-cta__last" data-last-order hidden>
+            <span class="muted">Tu último pedido</span>
+            <strong data-last-order-id></strong>
+            <a class="btn btn--small" data-last-order-link href="#">Seguir pedido →</a>
+          </div>
+          <a class="btn btn--ghost btn--small" href="seguimiento.html?demo=1">Ver cómo funciona (demo)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visítanos -->
+    <section id="visitanos" class="section">
+      <div class="container info">
+        <div>
+          <p class="eyebrow">Visítanos</p>
+          <h2>Te esperamos a la mesa.</h2>
+        </div>
+        <div class="info__grid">
+          <div>
+            <h3>Dirección</h3>
+            <p>Calle Balcarce 123<br />Salta Capital</p>
+          </div>
+          <div>
+            <h3>Horario</h3>
+            <p>Lunes a sábado<br />12:00 – 22:00</p>
+          </div>
+          <div>
+            <h3>Contacto</h3>
+            <p><a href="tel:+5493870000000">+54 9 387 000 0000</a><br />hola@roots.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="logo logo--small">Roots<span class="logo__dot">.</span></span>
+      <span class="muted">© <span data-year></span> Roots · Comida casera</span>
+    </div>
+  </footer>
+
+  <!-- Barra flotante del carrito (móvil) -->
+  <a href="#pedido" class="float-cart" data-float-cart hidden>
+    <span><span data-cart-count>0</span> platillos</span>
+    <strong data-float-total>$0</strong>
+  </a>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
