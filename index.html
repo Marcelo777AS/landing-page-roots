@@ -15,28 +15,34 @@
   <!-- Navegación -->
   <header class="nav">
     <div class="container nav__inner">
-      <a href="#inicio" class="logo">Roots<span class="logo__dot">.</span></a>
+      <a href="#inicio" class="logo" aria-label="Roots, cocina familiar"><img class="logo__img" src="logo.jpg" alt="Roots · Cocina familiar" width="52" height="52" /></a>
       <nav class="nav__links" aria-label="Principal">
         <a href="#menu">Menú</a>
         <a href="#como-pedir">Cómo pedir</a>
         <a href="#seguimiento">Seguimiento</a>
         <a href="#visitanos">Visítanos</a>
       </nav>
-      <a href="#pedido" class="btn btn--small">Pedir ahora <span class="cart-count" data-cart-count>0</span></a>
+      <a href="#pedido" class="btn btn--small">Pedir ahora
+        <span class="cart-badge">
+          <svg class="cart-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3.5h2.6l2.3 11.2a1.6 1.6 0 0 0 1.6 1.3h8.6a1.6 1.6 0 0 0 1.6-1.2l1.6-6.8H6.2"/></svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </span>
+      </a>
     </div>
   </header>
 
   <main>
     <!-- Hero -->
     <section id="inicio" class="hero">
+      <!-- Foto: Serranía de Hornocal, norte argentino (Unsplash) -->
+      <img class="hero__photo" src="https://images.unsplash.com/photo-1520751256043-b5735693d741?auto=format&fit=crop&w=2000&q=75" alt="" aria-hidden="true" />
       <img class="hero__scene" src="hero.svg" alt="" aria-hidden="true" />
       <div class="container hero__inner">
         <div class="hero__content">
           <p class="eyebrow">Cocina casera del norte</p>
           <h1>Comida de casa,<br />desde la raíz.</h1>
           <p class="hero__lead">
-            Asado a la leña, recetas salteñas de siempre y un buen tinto de los Valles.
-            Pide a domicilio o ven a comer con nosotros.
+            Pastas y empanadas en masa casera. Sándwiches en pan artesanal.
           </p>
           <div class="hero__actions">
             <a href="#menu" class="btn">Ver el menú</a>
@@ -254,7 +260,7 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span class="logo logo--small">Roots<span class="logo__dot">.</span></span>
+      <span class="logo logo--small"><img class="logo__img" src="logo.jpg" alt="Roots · Cocina familiar" width="40" height="40" /></span>
       <span class="muted">© <span data-year></span> Roots · Comida casera</span>
     </div>
   </footer>
